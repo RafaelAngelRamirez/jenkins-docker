@@ -1,3 +1,6 @@
 # jenkins-docker
-Docker image for jenkins with docker support    
-##Note-  Chnage the line `docker-ce=17.12.1~ce` depending on ther version of docker client you need to use.
+Docker image for jenkins with docker support.
+
+
+Get the latest docker installation avaliable for debian. 
+Adds a Jenkins user to the docker group. 

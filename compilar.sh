@@ -1,12 +1,12 @@
 #!/bin/bash
 
-nombre="legna37/jenkins-with-docker"
-etiqueta="latest"
+image_name="legna37/jenkins-with-docker"
+image_tag="latest"
 
-docker rmi -f $(docker images -a -q -f reference=$nombre) || echo "[ ! ] Nada que eliminar"
+docker rmi -f $(docker images -a -q -f reference=$image_name) || echo "[ ! ] Nothing to delete"
 
-docker build -t $nombre .
-docker tag $nombre $etiqueta 
+docker build -t $image_name .
+docker tag $image_name $image_tag 
 docekr login
-docker push
+docker push $image_name:$image_tag
 
